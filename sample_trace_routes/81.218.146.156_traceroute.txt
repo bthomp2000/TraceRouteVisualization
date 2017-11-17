@@ -1,0 +1,15 @@
+ 1  router.asus.com (192.168.1.1)  4.123 ms
+ 2  96.120.29.53 (96.120.29.53)  9.614 ms
+ 3  te-0-7-0-7-sur01.champaign.il.chicago.comcast.net (162.151.32.181)  10.653 ms
+ 4  be-121-ar01.area4.il.chicago.comcast.net (69.139.200.173)  14.316 ms
+ 5  *
+ 6  ae-1-3110.edge3.london1.level3.net (4.69.140.198)  112.042 ms
+ 7  bezeq-inter.edge3.london1.level3.net (212.113.15.78)  115.137 ms
+ 8  bzq-179-124-77.cust.bezeqint.net (212.179.124.77)  165.512 ms
+ 9  bzq-219-189-2.cablep.bezeqint.net (62.219.189.2)  167.081 ms
+10  *
+11  bzq-25-77-5.cust.bezeqint.net (212.25.77.5)  177.041 ms
+12  *
+13  *
+14  *
+15  *
