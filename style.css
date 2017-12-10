@@ -1,0 +1,43 @@
+.container{
+	background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#heatmap{
+	right: 5%;
+	height: 40%;
+	padding: 30px;
+	width: 40%;
+	position: absolute;
+}
+
+#traceroute{
+	position: absolute;
+	left: 5%;
+	padding: 30px;
+	height: 40%;
+	width: 40%;
+}
+
+#map {
+    height: 90%;
+    top: 35%;
+}
+html, body {
+    height: 120%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+	font-family: "Lucida Sans Unicode";
+}
+#destination_url {
+    width: 200px;
+}
+#instructions{
+    list-style-position:inside;
+}
+#command{
+    font-family: courier;
+}

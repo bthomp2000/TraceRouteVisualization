@@ -41,7 +41,7 @@ function loadFile(){
                 var r = new FileReader();
                 r.onload = function(e) { 
                     var contents = e.target.result;
-                    processData(contents);
+                    showTraceRoute(contents);
                 }
                 r.readAsText(file);
             }
@@ -60,7 +60,7 @@ function loadFile(){
 
 
 //Function to parse the traceroute data
-function processData(contents){
+function showTraceRoute(contents){
     hops = contents.trim().split("\n");
     hops = hops.filter(function(result){
       return !result.includes("*");
