@@ -273,10 +273,8 @@ function processData(){
   function showHopLinks(){
     var polyline = [];
     var keys = Object.keys(graphData);
+    var maxLength = document.getElementById("linklength").value;
 
-
-    var max = 0;
-    var min = 999;
     for (var i = 0; i < keys.length; i++) {
       var source_gps = keys[i];
       var dest_gps_list = Object.keys(graphData[source_gps]);
@@ -287,17 +285,10 @@ function processData(){
         var srcGPSlng = parseFloat(source_gps.split(",")[1]);
         var destGPSlat = parseFloat(dest_gps.split(",")[0]);
         var destGPSlng = parseFloat(dest_gps.split(",")[1]);
-        if((Math.abs(srcGPSlng - destGPSlng) < 30.0) && (Math.abs(srcGPSlat - destGPSlat) < 30.0)){
+        if((Math.abs(srcGPSlng - destGPSlng) < maxLength) && (Math.abs(srcGPSlat - destGPSlat) < maxLength)){
           var srclatLng = new google.maps.LatLng(srcGPSlat,srcGPSlng);
           var destlatLng = new google.maps.LatLng(destGPSlat,destGPSlng);
           polyline = [srclatLng,destlatLng];
-          if(count > max){
-            max = count;
-          }
-          if(count < min){
-            min = count;
-          }
-
           var colors = rainbow_colormap(count,1,12874);
           var r = colors[0].toString(16);
           var g = colors[1].toString(16);
@@ -313,13 +304,13 @@ function processData(){
             path: polyline,
             strokeWeight: count/1000,
             map: map,
-            strokeColor: color
+            strokeColor: color,
+            zIndex: count
           });
           polylines.push(line);
         }
       }
     }
-    console.log(min, max);
   }
 
   function clearHopLinks(){

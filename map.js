@@ -1,8 +1,10 @@
 function addMarkers(coords){
     var bounds = new google.maps.LatLngBounds();
+    coords.unshift([40.1164, -88.2434]);
     var polyline = [];
     for (var i = 0; i < coords.length; i++) {
         var coord = coords[i];
+        console.log(coord);
         var latLng = new google.maps.LatLng(coord[0],coord[1]);
         polyline.push(latLng);
         var marker = new google.maps.Marker({
@@ -31,7 +33,8 @@ function traceRoute(polyline){
   var lineSymbol = {
     path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
     scale: 5,
-    strokeColor: '#393'
+    strokeColor: '#393',
+    zIndex: 0
   };
 
 // Create the polyline and add the symbol to it via the 'icons' property.
@@ -56,5 +59,5 @@ function animateCircle(line) {
       var icons = line.get('icons');
       icons[0].offset = (count / 2) + '%';
       line.set('icons', icons);
-  }, 30);
+  }, 25);
 }

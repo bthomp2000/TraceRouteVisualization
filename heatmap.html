@@ -32,13 +32,14 @@
         </div>
         <div id="heatmap" class = "container">
             <h1>Heat Map</h1>
-            <p>This is a heat map of all of the IPs from mlab traceroute data. The most common 2400 IPs were counted and aggregated into shared cities. The results are displayed below</p>
+            <p>This is a heat map of all of the IPs from traceroute data from Measurement Lab. The most common 2400 IPs were counted and aggregated into shared cities. The results are displayed below</p>
             Show Heatmap: <input type="checkbox" id="showheatmap"><br>
             Use Local Extrema: <input type="checkbox" id="localExtrema"><br>
             Scale Radius: <input type="checkbox" id="scaleRadius"><br>
             Show sources: <input type="checkbox" id="sources"><br>
             Show Hop Links: <input type="checkbox" id="hopLinks"><br>
             Radius: <input type="text" id="radius" value="15"><br>
+            Maximum Link lengths: <input type="text" id="linklength" value="35"><br>
             <input type="button" id="render" value = "Render" onclick="processData()"><br>
         </div>
         <br><br>
